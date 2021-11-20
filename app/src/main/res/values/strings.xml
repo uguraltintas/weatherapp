@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Weather App</string>
+    <string name="app_name" translatable="false">Weather App</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="gps">Please Turn on Your device Location</string>
 </resources>

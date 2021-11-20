@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="Daily"
+            type="com.uguraltintas.weatherapp.model.Daily" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/twDay"
+            convertTimeToDay="@{Daily.dt}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:maxWidth="100dp" />
+
+        <ImageView
+            android:id="@+id/iwWeatherIcon"
+            setImage="@{Daily.weather[0].icon}"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignStart="@id/twDay"
+            android:layout_alignEnd="@id/twTemperature"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/twTemperature"
+            setTemperatureToInt="@{Daily.temp.day}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="end" />
+    </RelativeLayout>
+</layout>
