@@ -64,7 +64,6 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun getLastLocation() {
-        //TODO: Konum alınmıyor
         if (checkPermission()) {
             if (isLocationEnabled()) {
                 GlobalScope.launch {
